@@ -320,8 +320,7 @@ When enabled, displays a color as the background of the current buffer."
     (when-let ((spec (buffer-background--find-spec-for-buffer)))
       (buffer-background--process-spec spec)
       ;; Store the spec for later
-      (setq-local buffer-background--current-spec spec)
-      (message "Background enabled!"))
+      (setq-local buffer-background--current-spec spec))
     (run-hooks 'buffer-background-after-enable-hook)))
 
 (defun buffer-background--disable ()
